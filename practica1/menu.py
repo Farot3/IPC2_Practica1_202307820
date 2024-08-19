@@ -12,7 +12,6 @@ class Cliente:
         self.nombre = nombre
         self.correoElectronico = correoElectronico
         self.Nit = Nit
-        self.carros_comprados = []
 
 class Compra:
     def __init__(self, listaProductos, cliente, Id, CostoTotal):
