@@ -83,7 +83,7 @@ def realizar_compra():
         elif opcion == '2':
             seguro = input("¿Desea agregar un seguro de auto?: ")
             if seguro == "si":
-                total1 = b * sum(auto.precioUnitario for auto in autos_comprados) + sum(auto.precioUnitario for auto in autos_registrados)
+                total1 = b * sum(auto.precioUnitario for auto in autos_comprados) + sum(auto.precioUnitario for auto in autos_comprados)
                 id_compra = len(compras_realizadas) + 1
                 compra = Compra(autos_comprados, cliente, id_compra, total1)
                 compras_realizadas.append(compra)
