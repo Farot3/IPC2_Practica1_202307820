@@ -91,8 +91,8 @@ def realizar_compra():
                 print(f"Factura ID: {compra.Id}")
                 print(f"Cliente: {cliente.nombre} (NIT: {cliente.Nit})")
                 for auto in autos_comprados:
-                    print(f"- {auto.marca} {auto.modelo}, Placa: {auto.placa}, Precio: ${auto.precioUnitario + b * auto.precioUnitario:.2f}")
-                print(f"Total a pagar: ${total1:.2f}\n")
+                    print(f"- {auto.marca} {auto.modelo}, Placa: {auto.placa}, Precio: Q{auto.precioUnitario + b * auto.precioUnitario:.2f}")
+                print(f"Total a pagar: Q{total1:.2f}\n")
                 break
             elif seguro == "no":
                 total = sum(auto.precioUnitario for auto in autos_comprados)
@@ -103,8 +103,8 @@ def realizar_compra():
                 print(f"Factura ID: {compra.Id}")
                 print(f"Cliente: {cliente.nombre} (NIT: {cliente.Nit})")
                 for auto in autos_comprados:
-                    print(f"- {auto.marca} {auto.modelo}, Placa: {auto.placa}, Precio: ${auto.precioUnitario:.2f}")
-                print(f"Total a pagar: ${total:.2f}\n")
+                    print(f"- {auto.marca} {auto.modelo}, Placa: {auto.placa}, Precio: Q{auto.precioUnitario:.2f}")
+                print(f"Total a pagar: Q{total:.2f}\n")
                 break
             else:
                 print("Opción no válida.\n")
@@ -124,7 +124,7 @@ def generar_reporte_compras():
             print("AUTO(S) ADQUIRIDO(S)")
             for auto in compra.listaProductos:
                 print(f"    {auto.marca} {auto.modelo}, Placa: {auto.placa}")
-            print(f"Total pagado: ${compra.CostoTotal:.2f}")
+            print(f"Total pagado: Q{compra.CostoTotal:.2f}")
             print("========================================================== \n")
         TOTAL = sum(compra.CostoTotal for compra in compras_realizadas)
         print(f"Total General: Q{TOTAL:.2f}")
